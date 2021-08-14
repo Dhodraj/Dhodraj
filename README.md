@@ -5,7 +5,7 @@
 
 - 👯 I’m looking to collaborate on **React.js**
 
-- 👨‍💻 All of my projects are available at [dhodraj.netlify.app](dhodraj.netlify.app)
+- 👨‍💻 All of my projects are available at [dhodraj.netlify.app](https://dhodraj.netlify.app/)
 
 - 💬 Ask me about **React , SQL , C , Python**
 
