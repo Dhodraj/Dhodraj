@@ -38,9 +38,12 @@
   <a href="https://postman.com" target="_blank"> <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="postman" width="40" height="40"/> </a> 
   <a href="https://www.python.org" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> 
   <a href="https://reactjs.org/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a> 
-  <a href="https://www.mongodb.com/" target="_blank"><img src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.svgrepo.com%2Fshow%2F331488%2Fmongodb.svg&imgrefurl=https%3A%2F%2Fwww.svgrepo.com%2Fsvg%2F331488%2Fmongodb&tbnid=m2KN0oQQvNMvcM&vet=12ahUKEwiJzfj3xff1AhVPKbcAHSF5DSMQMygIegUIARDKAQ..i&docid=8heb7k2xCOQtrM&w=1024&h=1024&q=mongodb%20icon%20svg&ved=2ahUKEwiJzfj3xff1AhVPKbcAHSF5DSMQMygIegUIARDKAQ" alt="mongo-db" width="40" height="40"/></a>
+  <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb" width="40" height="40"/> </a>
 
 <p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=dhodraj&show_icons=true&locale=en&layout=compact" alt="dhodraj" /></p>
 
 <p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=dhodraj&show_icons=true&locale=en" alt="dhodraj" /></p>
+
+<p><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=dhodraj&show_icons=true&locale=en&layout=compact" alt="dhodraj" /></p>
+
 
