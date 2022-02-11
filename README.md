@@ -1,7 +1,4 @@
 <h1 align="center">Hi 👋, I'm Dhodraj Sundaram</h1>
-<h3 align="center">A Passionate Web developer who has deep interest in learning new web stacks and databases.</h3>
-
-- 🌱 I’m currently learning **Web Development**
 
 - 👯 I’m looking to collaborate on **React.js**
 
