@@ -1,10 +1,6 @@
 <h1 align="center">Hi 👋, I'm Dhodraj Sundaram</h1>
 
-- 👯 I’m looking to collaborate on **MERN Stack**
-
-- 👨‍💻 All of my projects are available at [dhodraj.netlify.app](https://dhodraj.netlify.app/)
-
-- 💬 Ask me about **Full Stack Web Development**
+- 💬 Ask me about **Backend Development**
 
 - 📫 Mail : **dhodrajsdr192@gmail.com**
 
