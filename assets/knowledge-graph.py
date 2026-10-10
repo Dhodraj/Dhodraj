@@ -439,7 +439,7 @@ def panel(o):
         o(f'<text class="s" x="{tx+26}" y="{yy}" font-size="13.5" fill="{INK}"><tspan font-weight="700">{k}</tspan><tspan fill="{GREY}">  {v}</tspan></text>')
         yy += 23
     # footnote
-    o(f'<text class="s" x="48" y="{H-38}" font-size="11.5" fill="{GREY}">States show public evidence, not skill level. Repositories and figures are listed in the README, where they can change without redrawing this graph.</text>')
+    o(f'<text class="s" x="48" y="{H-38}" font-size="11.5" fill="{GREY}">Squares show public evidence, not skill level.</text>')
 
 
 def describe():

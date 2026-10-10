@@ -255,5 +255,5 @@
 <text class="s" x="398" y="1188" font-size="13.5" fill="#191B19"><tspan font-weight="700">evidence</tspan><tspan fill="#55575C">  research, measure, verify</tspan></text>
 <text class="m" x="372" y="1211" font-size="11" fill="#087653">06</text>
 <text class="s" x="398" y="1211" font-size="13.5" fill="#191B19"><tspan font-weight="700">goals</tspan><tspan fill="#55575C">  outcomes over technology fashion</tspan></text>
-<text class="s" x="48" y="1262" font-size="11.5" fill="#55575C">States show public evidence, not skill level. Repositories and figures are listed in the README, where they can change without redrawing this graph.</text>
+<text class="s" x="48" y="1262" font-size="11.5" fill="#55575C">Squares show public evidence, not skill level.</text>
 </svg>
