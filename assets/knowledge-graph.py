@@ -69,8 +69,21 @@ GX0, GY0, GX1, GY1 = 48, 214, 952, 1004     # graph area
 CX, CY = 500, 606                            # identity node
 SEED = 7
 
-INK, GREY, MUTED, ACCENT = "#191B19", "#55575C", "#6B6D71", "#087653"
-EDGE, EDGE_LABEL, SAGE, RULE, BG = "#7A9183", "#3E5547", "#DDECE3", "#E4E2DC", "#FAF9F6"
+# Two palettes. Light is the default; dark matches GitHub's dark canvas so the
+# plate does not glare. set_theme() picks one; render() reads these globals.
+THEMES = {
+    "light": dict(INK="#191B19", GREY="#55575C", MUTED="#6B6D71", ACCENT="#087653",
+                  EDGE="#7A9183", EDGE_LABEL="#3E5547", SAGE="#DDECE3", RULE="#E4E2DC",
+                  BG="#FAF9F6", DOT="#E1DFD8", MEMBER="#9DAFA3", INTEREST="#868A84"),
+    "dark":  dict(INK="#E6EDF3", GREY="#AEB7C0", MUTED="#9BA5AF", ACCENT="#46B57D",
+                  EDGE="#7E9A8A", EDGE_LABEL="#A7BEB0", SAGE="#15281E", RULE="#30363D",
+                  BG="#0D1117", DOT="#1C222B", MEMBER="#5A6B61", INTEREST="#6E7681"),
+}
+INK = GREY = MUTED = ACCENT = EDGE = EDGE_LABEL = SAGE = RULE = BG = DOT = MEMBER = INTEREST = ""
+
+
+def set_theme(name):
+    globals().update(THEMES[name])
 
 SANS = '"Helvetica Neue", Helvetica, Arial, "Liberation Sans", sans-serif'
 MONO = 'ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace'
@@ -235,7 +248,7 @@ def render(nodes, edges):
     o('<title id="t">Knowledge graph: how Dhodraj Sundaram\'s engineering ideas connect</title>')
     o(f'<desc id="d">{esc(describe())}</desc>')
     o('<defs>')
-    o(f'<pattern id="dots" width="16" height="16" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="0.8" fill="#E1DFD8"/></pattern>')
+    o(f'<pattern id="dots" width="16" height="16" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="0.8" fill="{DOT}"/></pattern>')
     o(f'<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 1L9 5L0 9z" fill="{EDGE}"/></marker>')
     o(f'<marker id="aa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 1L9 5L0 9z" fill="{ACCENT}"/></marker>')
     o('<style>')
@@ -260,7 +273,7 @@ def render(nodes, edges):
     for a, b, kind in edges:
         A, B = nodes[a], nodes[b]
         if kind == "member":
-            o(f'<line class="draw" pathLength="1" style="animation-delay:{1.0 + sweep(B):.2f}s" x1="{A.x:.1f}" y1="{A.y:.1f}" x2="{B.x:.1f}" y2="{B.y:.1f}" stroke="#9DAFA3" stroke-width="1.1"/>')
+            o(f'<line class="draw" pathLength="1" style="animation-delay:{1.0 + sweep(B):.2f}s" x1="{A.x:.1f}" y1="{A.y:.1f}" x2="{B.x:.1f}" y2="{B.y:.1f}" stroke="{MEMBER}" stroke-width="1.1"/>')
     for d in DOMAINS:
         D = nodes[d[0]]
         o(f'<line class="draw" pathLength="1" style="animation-delay:{0.35 + sweep(D) * 0.5:.2f}s" x1="{CX}" y1="{CY}" x2="{D.x:.1f}" y2="{D.y:.1f}" stroke="{INK}" stroke-width="2.4"/>')
@@ -325,7 +338,7 @@ def render(nodes, edges):
                 o(f'<rect x="{n.x-q:.1f}" y="{n.y-q:.1f}" width="{2*q:.1f}" height="{2*q:.1f}" fill="{BG}" stroke="{ACCENT}" stroke-width="1.8"/>')
                 fill = INK
             else:
-                o(f'<rect x="{n.x-q:.1f}" y="{n.y-q:.1f}" width="{2*q:.1f}" height="{2*q:.1f}" fill="{BG}" stroke="#868A84" stroke-width="1.3"/>')
+                o(f'<rect x="{n.x-q:.1f}" y="{n.y-q:.1f}" width="{2*q:.1f}" height="{2*q:.1f}" fill="{BG}" stroke="{INTEREST}" stroke-width="1.3"/>')
                 fill = GREY
             o('</g>')
             o(f'<text class="s halo fade" style="animation-delay:{1.35 + sweep(n):.2f}s" x="{n.x:.1f}" y="{n.y + n.r + 16:.1f}" text-anchor="middle" font-size="15.5" fill="{fill}">{esc(n.label)}</text>')
@@ -412,7 +425,7 @@ def panel(o):
     for kind, lab in items:
         if kind == "built": o(f'<rect x="{lx+2}" y="{yy-10}" width="11" height="11" fill="{ACCENT}"/>')
         if kind == "explore": o(f'<rect x="{lx+2}" y="{yy-10}" width="11" height="11" fill="{BG}" stroke="{ACCENT}" stroke-width="1.8"/>')
-        if kind == "interest": o(f'<rect x="{lx+4}" y="{yy-8}" width="7" height="7" fill="{BG}" stroke="#868A84" stroke-width="1.3"/>')
+        if kind == "interest": o(f'<rect x="{lx+4}" y="{yy-8}" width="7" height="7" fill="{BG}" stroke="{INTEREST}" stroke-width="1.3"/>')
         o(f'<text class="s" x="{lx+24}" y="{yy}" font-size="13.5" fill="{INK}">{lab}</text>')
         yy += 24
     # link types
@@ -467,7 +480,10 @@ if __name__ == "__main__":
     nodes = build()
     edges = edges_of(nodes)
     simulate(nodes, edges)
-    out = sys.argv[1] if len(sys.argv) > 1 else os.path.join(os.path.dirname(os.path.abspath(__file__)), "knowledge-graph.svg")
-    with open(out, "w") as f:
-        f.write(render(nodes, edges))
-    print("wrote", out)
+    here = os.path.dirname(os.path.abspath(__file__))
+    for name, fname in (("light", "knowledge-graph.svg"), ("dark", "knowledge-graph-dark.svg")):
+        set_theme(name)
+        out = os.path.join(here, fname)
+        with open(out, "w") as f:
+            f.write(render(nodes, edges))
+        print("wrote", out)

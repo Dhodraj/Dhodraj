@@ -1,0 +1,259 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1300" role="img" aria-labelledby="t d">
+<title id="t">Knowledge graph: how Dhodraj Sundaram's engineering ideas connect</title>
+<desc id="d">A knowledge graph with Dhodraj Sundaram at the centre, joined to six domains. Reasoning: First principles; Second-order effects; What not to build; Simplicity first; Evidence over assumption. Systems: Concurrency; Backend architecture, interest with nothing public yet; Operating systems, interest with nothing public yet; Distributed systems, interest with nothing public yet; Networking, interest with nothing public yet. Tools and AI: Agent orchestration; Semantic code search; Typed libraries; Research automation, started. Open source: Published packages; Design docs in the open. Learning: Technical writing; Measured results; How mechanisms work, interest with nothing public yet. Product: Problem definition; Scope cuts; Architecture trade-offs. Labelled links: First principles to Backend architecture, informs; Concurrency to Agent orchestration, informs; Measured results to Scope cuts, sets; What not to build to Scope cuts, drives; Open source to Learning, shared learning. Callouts: inverse thinking find the failure modes first, then decide what not to build; systems first understand how the machine runs before choosing the tool; tools turn an insight that keeps coming back into a workflow. A footer lists how decisions are made: first principles, second-order effects, inverse thinking, simplicity, evidence and goals.</desc>
+<defs>
+<pattern id="dots" width="16" height="16" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="0.8" fill="#1C222B"/></pattern>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 1L9 5L0 9z" fill="#7E9A8A"/></marker>
+<marker id="aa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 1L9 5L0 9z" fill="#46B57D"/></marker>
+<style>
+.s{font-family:"Helvetica Neue", Helvetica, Arial, "Liberation Sans", sans-serif} .m{font-family:ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace} .f{font-family:Georgia, "Times New Roman", "Liberation Serif", serif}
+.halo{paint-order:stroke;stroke:#0D1117;stroke-width:4px;stroke-linejoin:round}
+.draw{stroke-dasharray:1;animation:draw .7s ease-out both}
+.fade{animation:fade .5s ease-out both}
+.pop{transform-box:fill-box;transform-origin:center;animation:pop .45s cubic-bezier(.2,.9,.3,1.25) both}
+@keyframes draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@keyframes pop{from{opacity:0;transform:scale(.3)}to{opacity:1;transform:scale(1)}}
+@media (prefers-reduced-motion:reduce){.draw,.fade,.pop{animation:none}}
+</style></defs>
+<rect width="1000" height="1300" fill="#0D1117"/>
+<rect x="24" y="190" width="952" height="830" fill="url(#dots)"/>
+<rect x="20" y="20" width="960" height="1260" fill="none" stroke="#30363D"/>
+<path d="M27 34H41M34 27V41" stroke="#46B57D" stroke-width="1.2"/>
+<path d="M959 34H973M966 27V41" stroke="#46B57D" stroke-width="1.2"/>
+<path d="M27 1266H41M34 1259V1273" stroke="#46B57D" stroke-width="1.2"/>
+<path d="M959 1266H973M966 1259V1273" stroke="#46B57D" stroke-width="1.2"/>
+<rect x="48" y="58" width="8" height="8" fill="#46B57D"/>
+<text class="m" x="64" y="66" font-size="11" letter-spacing="2" fill="#46B57D">KNOWLEDGE GRAPH</text>
+<text class="f" x="46" y="112" font-size="34" fill="#E6EDF3">Understanding systems.</text>
+<text class="f" x="46" y="150" font-size="34" fill="#E6EDF3">Building useful software.</text>
+<text class="m" x="600" y="64" font-size="11.5"><tspan fill="#9BA5AF">name .............</tspan><tspan fill="#E6EDF3"> Dhodraj Sundaram</tspan></text>
+<text class="m" x="600" y="83" font-size="11.5"><tspan fill="#9BA5AF">role .............</tspan><tspan fill="#E6EDF3"> software engineer, tech lead</tspan></text>
+<text class="m" x="600" y="102" font-size="11.5"><tspan fill="#9BA5AF">focus ............</tspan><tspan fill="#E6EDF3"> systems, tools, product</tspan></text>
+<text class="m" x="600" y="121" font-size="11.5"><tspan fill="#9BA5AF">method ...........</tspan><tspan fill="#E6EDF3"> first principles</tspan></text>
+<text class="m" x="600" y="140" font-size="11.5"><tspan fill="#9BA5AF">checks ...........</tspan><tspan fill="#E6EDF3"> evidence over assumption</tspan></text>
+<text class="m" x="600" y="159" font-size="11.5"><tspan fill="#9BA5AF">profile ..........</tspan><tspan fill="#E6EDF3"> github.com/dhodraj</tspan></text>
+<line x1="48" y1="184" x2="952" y2="184" stroke="#E6EDF3" stroke-width="1.4"/>
+<line x1="48" y1="188.5" x2="952" y2="188.5" stroke="#30363D"/>
+<line class="draw" pathLength="1" style="animation-delay:1.55s" x1="407.0" y1="411.2" x2="341.2" y2="327.6" stroke="#5A6B61" stroke-width="1.1"/>
+<line class="draw" pathLength="1" style="animation-delay:1.53s" x1="407.0" y1="411.2" x2="294.5" y2="364.8" stroke="#5A6B61" stroke-width="1.1"/>
+<line class="draw" pathLength="1" style="animation-delay:1.58s" x1="407.0" y1="411.2" x2="433.5" y2="255.7" stroke="#5A6B61" stroke-width="1.1"/>
+<line class="draw" pathLength="1" style="animation-delay:1.52s" x1="407.0" y1="411.2" x2="281.0" y2="416.9" stroke="#5A6B61" stroke-width="1.1"/>
+<line class="draw" pathLength="1" style="animation-delay:1.57s" x1="407.0" y1="411.2" x2="398.0" y2="292.3" stroke="#5A6B61" stroke-width="1.1"/>
+<line class="draw" pathLength="1" style="animation-delay:1.09s" x1="670.9" y1="457.2" x2="768.6" y2="397.9" stroke="#5A6B61" stroke-width="1.1"/>
+<line class="draw" pathLength="1" style="animation-delay:1.07s" x1="670.9" y1="457.2" x2="707.4" y2="357.2" stroke="#5A6B61" stroke-width="1.1"/>
+<line class="draw" pathLength="1" style="animation-delay:1.12s" x1="670.9" y1="457.2" x2="801.1" y2="497.0" stroke="#5A6B61" stroke-width="1.1"/>
+<line class="draw" pathLength="1" style="animation-delay:1.05s" x1="670.9" y1="457.2" x2="648.7" y2="321.0" stroke="#5A6B61" stroke-width="1.1"/>
+<line class="draw" pathLength="1" style="animation-delay:1.10s" x1="670.9" y1="457.2" x2="793.0" y2="442.1" stroke="#5A6B61" stroke-width="1.1"/>
+<line class="draw" pathLength="1" style="animation-delay:1.36s" x1="323.4" y1="734.8" x2="322.2" y2="866.5" stroke="#5A6B61" stroke-width="1.1"/>
+<line class="draw" pathLength="1" style="animation-delay:1.38s" x1="323.4" y1="734.8" x2="251.4" y2="824.9" stroke="#5A6B61" stroke-width="1.1"/>
+<line class="draw" pathLength="1" style="animation-delay:1.40s" x1="323.4" y1="734.8" x2="209.8" y2="785.1" stroke="#5A6B61" stroke-width="1.1"/>
+<line class="draw" pathLength="1" style="animation-delay:1.21s" x1="717.9" y1="685.4" x2="754.7" y2="797.9" stroke="#5A6B61" stroke-width="1.1"/>
+<line class="draw" pathLength="1" style="animation-delay:1.16s" x1="717.9" y1="685.4" x2="825.7" y2="630.7" stroke="#5A6B61" stroke-width="1.1"/>
+<line class="draw" pathLength="1" style="animation-delay:1.17s" x1="717.9" y1="685.4" x2="858.3" y2="693.1" stroke="#5A6B61" stroke-width="1.1"/>
+<line class="draw" pathLength="1" style="animation-delay:1.19s" x1="717.9" y1="685.4" x2="813.8" y2="754.1" stroke="#5A6B61" stroke-width="1.1"/>
+<line class="draw" pathLength="1" style="animation-delay:1.49s" x1="274.7" y1="576.2" x2="194.5" y2="483.6" stroke="#5A6B61" stroke-width="1.1"/>
+<line class="draw" pathLength="1" style="animation-delay:1.47s" x1="274.7" y1="576.2" x2="163.5" y2="541.9" stroke="#5A6B61" stroke-width="1.1"/>
+<line class="draw" pathLength="1" style="animation-delay:1.45s" x1="274.7" y1="576.2" x2="139.2" y2="608.0" stroke="#5A6B61" stroke-width="1.1"/>
+<line class="draw" pathLength="1" style="animation-delay:1.31s" x1="528.9" y1="812.3" x2="454.0" y2="910.2" stroke="#5A6B61" stroke-width="1.1"/>
+<line class="draw" pathLength="1" style="animation-delay:1.26s" x1="528.9" y1="812.3" x2="625.1" y2="889.7" stroke="#5A6B61" stroke-width="1.1"/>
+<line class="draw" pathLength="1" style="animation-delay:0.63s" x1="500" y1="606" x2="407.0" y2="411.2" stroke="#E6EDF3" stroke-width="2.4"/>
+<line class="draw" pathLength="1" style="animation-delay:0.39s" x1="500" y1="606" x2="670.9" y2="457.2" stroke="#E6EDF3" stroke-width="2.4"/>
+<line class="draw" pathLength="1" style="animation-delay:0.44s" x1="500" y1="606" x2="717.9" y2="685.4" stroke="#E6EDF3" stroke-width="2.4"/>
+<line class="draw" pathLength="1" style="animation-delay:0.49s" x1="500" y1="606" x2="528.9" y2="812.3" stroke="#E6EDF3" stroke-width="2.4"/>
+<line class="draw" pathLength="1" style="animation-delay:0.54s" x1="500" y1="606" x2="323.4" y2="734.8" stroke="#E6EDF3" stroke-width="2.4"/>
+<line class="draw" pathLength="1" style="animation-delay:0.58s" x1="500" y1="606" x2="274.7" y2="576.2" stroke="#E6EDF3" stroke-width="2.4"/>
+<g class="fade" style="animation-delay:2.22s"><path class="draw" pathLength="1" style="animation-delay:2.22s" d="M350.2 328.3Q519.2 408.3 698.8 356.5" fill="none" stroke="#7E9A8A" stroke-width="1.3" marker-end="url(#ah)"/></g>
+<g class="fade" style="animation-delay:2.03s"><path class="draw" pathLength="1" style="animation-delay:2.03s" d="M768.3 406.9Q641.7 592.7 755.1 786.9" fill="none" stroke="#7E9A8A" stroke-width="1.3" marker-end="url(#ah)"/></g>
+<g class="fade" style="animation-delay:2.15s"><path class="draw" pathLength="1" style="animation-delay:2.15s" d="M248.7 816.3Q156.8 700.2 166.8 552.4" fill="none" stroke="#7E9A8A" stroke-width="1.3" marker-end="url(#ah)"/></g>
+<g class="fade" style="animation-delay:2.23s"><path class="draw" pathLength="1" style="animation-delay:2.23s" d="M427.3 262.2Q141.8 249.6 171.1 533.9" fill="none" stroke="#7E9A8A" stroke-width="1.3" marker-end="url(#ah)"/></g>
+<g class="fade" style="animation-delay:2.11s"><path class="fade" style="animation-delay:2.11s" d="M515.8 807.3Q413.2 810.9 338.4 740.5" fill="none" stroke="#46B57D" stroke-width="1.3" stroke-dasharray="5 4" marker-end="url(#aa)"/></g>
+<g class="pop" style="animation-delay:1.13s">
+<rect x="390.0" y="394.2" width="34.0" height="34.0" fill="#0D1117" stroke="#E6EDF3" stroke-width="0.9"/>
+<rect x="394.0" y="398.2" width="26.0" height="26.0" fill="#E6EDF3"/>
+</g>
+<text class="m halo fade" style="animation-delay:1.28s" x="347.0" y="451.2" text-anchor="end" font-size="11" fill="#46B57D">01</text>
+<text class="s halo fade" style="animation-delay:1.28s" x="407.0" y="451.2" text-anchor="middle" font-size="22" font-weight="700" fill="#E6EDF3">Reasoning</text>
+<g class="pop" style="animation-delay:0.89s">
+<rect x="653.9" y="440.2" width="34.0" height="34.0" fill="#0D1117" stroke="#E6EDF3" stroke-width="0.9"/>
+<rect x="657.9" y="444.2" width="26.0" height="26.0" fill="#E6EDF3"/>
+</g>
+<text class="m halo fade" style="animation-delay:1.04s" x="619.2" y="497.2" text-anchor="end" font-size="11" fill="#46B57D">02</text>
+<text class="s halo fade" style="animation-delay:1.04s" x="670.9" y="497.2" text-anchor="middle" font-size="22" font-weight="700" fill="#E6EDF3">Systems</text>
+<g class="pop" style="animation-delay:0.94s">
+<rect x="700.9" y="668.4" width="34.0" height="34.0" fill="#0D1117" stroke="#E6EDF3" stroke-width="0.9"/>
+<rect x="704.9" y="672.4" width="26.0" height="26.0" fill="#E6EDF3"/>
+</g>
+<text class="m halo fade" style="animation-delay:1.09s" x="641.2" y="725.4" text-anchor="end" font-size="11" fill="#46B57D">03</text>
+<text class="s halo fade" style="animation-delay:1.09s" x="717.9" y="725.4" text-anchor="middle" font-size="22" font-weight="700" fill="#E6EDF3">Tools and AI</text>
+<g class="pop" style="animation-delay:0.99s">
+<rect x="511.9" y="795.3" width="34.0" height="34.0" fill="#0D1117" stroke="#E6EDF3" stroke-width="0.9"/>
+<rect x="515.9" y="799.3" width="26.0" height="26.0" fill="#E6EDF3"/>
+</g>
+<text class="m halo fade" style="animation-delay:1.14s" x="458.3" y="852.3" text-anchor="end" font-size="11" fill="#46B57D">04</text>
+<text class="s halo fade" style="animation-delay:1.14s" x="528.9" y="852.3" text-anchor="middle" font-size="22" font-weight="700" fill="#E6EDF3">Open source</text>
+<g class="pop" style="animation-delay:1.04s">
+<rect x="306.4" y="717.8" width="34.0" height="34.0" fill="#0D1117" stroke="#E6EDF3" stroke-width="0.9"/>
+<rect x="310.4" y="721.8" width="26.0" height="26.0" fill="#E6EDF3"/>
+</g>
+<text class="m halo fade" style="animation-delay:1.19s" x="272.1" y="774.8" text-anchor="end" font-size="11" fill="#46B57D">05</text>
+<text class="s halo fade" style="animation-delay:1.19s" x="323.4" y="774.8" text-anchor="middle" font-size="22" font-weight="700" fill="#E6EDF3">Learning</text>
+<g class="pop" style="animation-delay:1.08s">
+<rect x="257.7" y="559.2" width="34.0" height="34.0" fill="#0D1117" stroke="#E6EDF3" stroke-width="0.9"/>
+<rect x="261.7" y="563.2" width="26.0" height="26.0" fill="#E6EDF3"/>
+</g>
+<text class="m halo fade" style="animation-delay:1.23s" x="228.8" y="616.2" text-anchor="end" font-size="11" fill="#46B57D">06</text>
+<text class="s halo fade" style="animation-delay:1.23s" x="274.7" y="616.2" text-anchor="middle" font-size="22" font-weight="700" fill="#E6EDF3">Product</text>
+<g class="pop" style="animation-delay:1.75s">
+<rect x="335.8" y="322.2" width="10.8" height="10.8" fill="#46B57D"/>
+</g>
+<text class="s halo fade" style="animation-delay:1.90s" x="341.2" y="349.6" text-anchor="middle" font-size="15.5" fill="#E6EDF3">First principles</text>
+<g class="pop" style="animation-delay:1.73s">
+<rect x="289.1" y="359.4" width="10.8" height="10.8" fill="#46B57D"/>
+</g>
+<text class="s halo fade" style="animation-delay:1.88s" x="294.5" y="386.8" text-anchor="middle" font-size="15.5" fill="#E6EDF3">Second-order effects</text>
+<g class="pop" style="animation-delay:1.78s">
+<rect x="428.1" y="250.3" width="10.8" height="10.8" fill="#46B57D"/>
+</g>
+<text class="s halo fade" style="animation-delay:1.93s" x="433.5" y="277.7" text-anchor="middle" font-size="15.5" fill="#E6EDF3">What not to build</text>
+<g class="pop" style="animation-delay:1.72s">
+<rect x="275.6" y="411.5" width="10.8" height="10.8" fill="#46B57D"/>
+</g>
+<text class="s halo fade" style="animation-delay:1.87s" x="281.0" y="438.9" text-anchor="middle" font-size="15.5" fill="#E6EDF3">Simplicity first</text>
+<g class="pop" style="animation-delay:1.77s">
+<rect x="392.6" y="286.9" width="10.8" height="10.8" fill="#46B57D"/>
+</g>
+<text class="s halo fade" style="animation-delay:1.92s" x="398.0" y="314.3" text-anchor="middle" font-size="15.5" fill="#E6EDF3">Evidence over assumption</text>
+<g class="pop" style="animation-delay:1.29s">
+<rect x="763.2" y="392.5" width="10.8" height="10.8" fill="#46B57D"/>
+</g>
+<text class="s halo fade" style="animation-delay:1.44s" x="768.6" y="419.9" text-anchor="middle" font-size="15.5" fill="#E6EDF3">Concurrency</text>
+<g class="pop" style="animation-delay:1.27s">
+<rect x="704.1" y="354.0" width="6.5" height="6.5" fill="#0D1117" stroke="#6E7681" stroke-width="1.3"/>
+</g>
+<text class="s halo fade" style="animation-delay:1.42s" x="707.4" y="376.8" text-anchor="middle" font-size="15.5" fill="#AEB7C0">Backend architecture</text>
+<g class="pop" style="animation-delay:1.32s">
+<rect x="797.9" y="493.8" width="6.5" height="6.5" fill="#0D1117" stroke="#6E7681" stroke-width="1.3"/>
+</g>
+<text class="s halo fade" style="animation-delay:1.47s" x="801.1" y="516.6" text-anchor="middle" font-size="15.5" fill="#AEB7C0">Operating systems</text>
+<g class="pop" style="animation-delay:1.25s">
+<rect x="645.5" y="317.8" width="6.5" height="6.5" fill="#0D1117" stroke="#6E7681" stroke-width="1.3"/>
+</g>
+<text class="s halo fade" style="animation-delay:1.40s" x="648.7" y="340.6" text-anchor="middle" font-size="15.5" fill="#AEB7C0">Distributed systems</text>
+<g class="pop" style="animation-delay:1.30s">
+<rect x="789.7" y="438.8" width="6.5" height="6.5" fill="#0D1117" stroke="#6E7681" stroke-width="1.3"/>
+</g>
+<text class="s halo fade" style="animation-delay:1.45s" x="793.0" y="461.7" text-anchor="middle" font-size="15.5" fill="#AEB7C0">Networking</text>
+<g class="pop" style="animation-delay:1.56s">
+<rect x="316.8" y="861.1" width="10.8" height="10.8" fill="#46B57D"/>
+</g>
+<text class="s halo fade" style="animation-delay:1.71s" x="322.2" y="888.5" text-anchor="middle" font-size="15.5" fill="#E6EDF3">Technical writing</text>
+<g class="pop" style="animation-delay:1.58s">
+<rect x="246.0" y="819.5" width="10.8" height="10.8" fill="#46B57D"/>
+</g>
+<text class="s halo fade" style="animation-delay:1.73s" x="251.4" y="846.9" text-anchor="middle" font-size="15.5" fill="#E6EDF3">Measured results</text>
+<g class="pop" style="animation-delay:1.60s">
+<rect x="206.6" y="781.9" width="6.5" height="6.5" fill="#0D1117" stroke="#6E7681" stroke-width="1.3"/>
+</g>
+<text class="s halo fade" style="animation-delay:1.75s" x="209.8" y="804.7" text-anchor="middle" font-size="15.5" fill="#AEB7C0">How mechanisms work</text>
+<g class="pop" style="animation-delay:1.41s">
+<rect x="749.3" y="792.5" width="10.8" height="10.8" fill="#46B57D"/>
+</g>
+<text class="s halo fade" style="animation-delay:1.56s" x="754.7" y="819.9" text-anchor="middle" font-size="15.5" fill="#E6EDF3">Agent orchestration</text>
+<g class="pop" style="animation-delay:1.36s">
+<rect x="820.3" y="625.3" width="10.8" height="10.8" fill="#46B57D"/>
+</g>
+<text class="s halo fade" style="animation-delay:1.51s" x="825.7" y="652.7" text-anchor="middle" font-size="15.5" fill="#E6EDF3">Semantic code search</text>
+<g class="pop" style="animation-delay:1.37s">
+<rect x="852.9" y="687.7" width="10.8" height="10.8" fill="#46B57D"/>
+</g>
+<text class="s halo fade" style="animation-delay:1.52s" x="858.3" y="715.1" text-anchor="middle" font-size="15.5" fill="#E6EDF3">Typed libraries</text>
+<g class="pop" style="animation-delay:1.39s">
+<rect x="808.4" y="748.7" width="10.8" height="10.8" fill="#0D1117" stroke="#46B57D" stroke-width="1.8"/>
+</g>
+<text class="s halo fade" style="animation-delay:1.54s" x="813.8" y="776.1" text-anchor="middle" font-size="15.5" fill="#E6EDF3">Research automation</text>
+<g class="pop" style="animation-delay:1.69s">
+<rect x="189.1" y="478.2" width="10.8" height="10.8" fill="#46B57D"/>
+</g>
+<text class="s halo fade" style="animation-delay:1.84s" x="194.5" y="505.6" text-anchor="middle" font-size="15.5" fill="#E6EDF3">Problem definition</text>
+<g class="pop" style="animation-delay:1.67s">
+<rect x="158.1" y="536.5" width="10.8" height="10.8" fill="#46B57D"/>
+</g>
+<text class="s halo fade" style="animation-delay:1.82s" x="163.5" y="563.9" text-anchor="middle" font-size="15.5" fill="#E6EDF3">Scope cuts</text>
+<g class="pop" style="animation-delay:1.65s">
+<rect x="133.8" y="602.6" width="10.8" height="10.8" fill="#46B57D"/>
+</g>
+<text class="s halo fade" style="animation-delay:1.80s" x="139.2" y="630.0" text-anchor="middle" font-size="15.5" fill="#E6EDF3">Architecture trade-offs</text>
+<g class="pop" style="animation-delay:1.51s">
+<rect x="448.6" y="904.8" width="10.8" height="10.8" fill="#46B57D"/>
+</g>
+<text class="s halo fade" style="animation-delay:1.66s" x="454.0" y="932.2" text-anchor="middle" font-size="15.5" fill="#E6EDF3">Published packages</text>
+<g class="pop" style="animation-delay:1.46s">
+<rect x="619.7" y="884.3" width="10.8" height="10.8" fill="#46B57D"/>
+</g>
+<text class="s halo fade" style="animation-delay:1.61s" x="625.1" y="911.7" text-anchor="middle" font-size="15.5" fill="#E6EDF3">Design docs in the open</text>
+<text class="m halo fade" style="animation-delay:2.72s" x="521.8" y="379.3" text-anchor="middle" font-size="11" fill="#A7BEB0">informs</text>
+<text class="m halo fade" style="animation-delay:2.53s" x="701.7" y="598.8" text-anchor="middle" font-size="11" fill="#A7BEB0">informs</text>
+<text class="m halo fade" style="animation-delay:2.65s" x="182.3" y="696.2" text-anchor="middle" font-size="11" fill="#A7BEB0">sets</text>
+<text class="m halo fade" style="animation-delay:2.73s" x="220.5" y="327.8" text-anchor="middle" font-size="11" fill="#A7BEB0">drives</text>
+<text class="m halo fade" style="animation-delay:2.61s" x="406.1" y="790.6" text-anchor="middle" font-size="11" fill="#46B57D">shared learning</text>
+<g class="fade" style="animation-delay:2.9s">
+<path d="M433.5 255.7V244.0H259.4" fill="none" stroke="#E6EDF3" stroke-width="0.8" stroke-dasharray="2 2"/>
+<circle cx="433.5" cy="255.7" r="11.0" fill="none" stroke="#E6EDF3" stroke-width="0.9"/>
+<rect x="48" y="214" width="211.4" height="60" fill="#0D1117" stroke="#E6EDF3" stroke-width="0.9"/>
+<rect x="48" y="214" width="3" height="60" fill="#46B57D"/>
+<text class="m" x="60" y="234" font-size="11" font-weight="600" fill="#E6EDF3">inverse thinking</text>
+<text class="m" x="60" y="250" font-size="11" font-weight="400" fill="#9BA5AF">find the failure modes first,</text>
+<text class="m" x="60" y="266" font-size="11" font-weight="400" fill="#9BA5AF">then decide what not to build</text>
+<path d="M801.1 497.0V244.0H960.6" fill="none" stroke="#E6EDF3" stroke-width="0.8" stroke-dasharray="2 2"/>
+<circle cx="801.1" cy="497.0" r="8.6" fill="none" stroke="#E6EDF3" stroke-width="0.9"/>
+<rect x="736" y="214" width="224.6" height="60" fill="#0D1117" stroke="#E6EDF3" stroke-width="0.9"/>
+<rect x="736" y="214" width="3" height="60" fill="#46B57D"/>
+<text class="m" x="748" y="234" font-size="11" font-weight="600" fill="#E6EDF3">systems first</text>
+<text class="m" x="748" y="250" font-size="11" font-weight="400" fill="#9BA5AF">understand how the machine runs</text>
+<text class="m" x="748" y="266" font-size="11" font-weight="400" fill="#9BA5AF">before choosing the tool</text>
+<path d="M754.7 797.9V960.0H888.2" fill="none" stroke="#E6EDF3" stroke-width="0.8" stroke-dasharray="2 2"/>
+<circle cx="754.7" cy="797.9" r="11.0" fill="none" stroke="#E6EDF3" stroke-width="0.9"/>
+<rect x="690" y="930" width="198.2" height="60" fill="#0D1117" stroke="#E6EDF3" stroke-width="0.9"/>
+<rect x="690" y="930" width="3" height="60" fill="#46B57D"/>
+<text class="m" x="702" y="950" font-size="11" font-weight="600" fill="#E6EDF3">tools</text>
+<text class="m" x="702" y="966" font-size="11" font-weight="400" fill="#9BA5AF">turn an insight that keeps</text>
+<text class="m" x="702" y="982" font-size="11" font-weight="400" fill="#9BA5AF">coming back into a workflow</text>
+</g>
+<g class="fade">
+<circle cx="500" cy="606" r="74" fill="#0D1117" stroke="#46B57D" stroke-width="1" stroke-dasharray="2 4"/>
+<path d="M406 606H422M578 606H594M500 512V528M500 684V700" stroke="#46B57D" stroke-width="1.4"/>
+<text class="f halo" x="500" y="600" text-anchor="middle" font-size="31" fill="#E6EDF3">Dhodraj</text>
+<text class="f halo" x="500" y="631" text-anchor="middle" font-size="31" fill="#E6EDF3">Sundaram</text>
+<text class="m" x="500" y="648" text-anchor="middle" font-size="9.5" letter-spacing="1.4" fill="#46B57D">ENGINEER / LEAD</text>
+</g>
+<line x1="48" y1="1036" x2="952" y2="1036" stroke="#E6EDF3" stroke-width="1.4"/>
+<line x1="48" y1="1040.5" x2="952" y2="1040.5" stroke="#30363D"/>
+<text class="m" x="48" y="1070" font-size="11" letter-spacing="1.6" fill="#46B57D">READING THE GRAPH</text>
+<rect x="50" y="1086" width="11" height="11" fill="#46B57D"/>
+<text class="s" x="72" y="1096" font-size="13.5" fill="#E6EDF3">shown in public work</text>
+<rect x="50" y="1110" width="11" height="11" fill="#0D1117" stroke="#46B57D" stroke-width="1.8"/>
+<text class="s" x="72" y="1120" font-size="13.5" fill="#E6EDF3">started, early</text>
+<rect x="52" y="1136" width="7" height="7" fill="#0D1117" stroke="#6E7681" stroke-width="1.3"/>
+<text class="s" x="72" y="1144" font-size="13.5" fill="#E6EDF3">interest, nothing public yet</text>
+<text class="m" x="48" y="1182" font-size="11" letter-spacing="1.6" fill="#46B57D">LINKS</text>
+<line x1="48" y1="1204" x2="78" y2="1204" stroke="#7E9A8A" stroke-width="1.3" marker-end="url(#ah)"/>
+<text class="s" x="90" y="1208" font-size="13.5" fill="#E6EDF3">one idea feeds another</text>
+<line x1="48" y1="1228" x2="78" y2="1228" stroke="#46B57D" stroke-width="1.3" stroke-dasharray="5 4" marker-end="url(#aa)"/>
+<text class="s" x="90" y="1232" font-size="13.5" fill="#E6EDF3">feedback loop</text>
+<line x1="352" y1="1054" x2="352" y2="1222" stroke="#30363D"/>
+<text class="m" x="372" y="1070" font-size="11" letter-spacing="1.6" fill="#46B57D">HOW I DECIDE</text>
+<text class="m" x="372" y="1096" font-size="11" fill="#46B57D">01</text>
+<text class="s" x="398" y="1096" font-size="13.5" fill="#E6EDF3"><tspan font-weight="700">first principles</tspan><tspan fill="#AEB7C0">  understand the mechanism underneath</tspan></text>
+<text class="m" x="372" y="1119" font-size="11" fill="#46B57D">02</text>
+<text class="s" x="398" y="1119" font-size="13.5" fill="#E6EDF3"><tspan font-weight="700">second-order</tspan><tspan fill="#AEB7C0">  follow the consequences downstream</tspan></text>
+<text class="m" x="372" y="1142" font-size="11" fill="#46B57D">03</text>
+<text class="s" x="398" y="1142" font-size="13.5" fill="#E6EDF3"><tspan font-weight="700">inverse</tspan><tspan fill="#AEB7C0">  find failure modes and what not to build</tspan></text>
+<text class="m" x="372" y="1165" font-size="11" fill="#46B57D">04</text>
+<text class="s" x="398" y="1165" font-size="13.5" fill="#E6EDF3"><tspan font-weight="700">simplicity</tspan><tspan fill="#AEB7C0">  the simplest thing that meets the need</tspan></text>
+<text class="m" x="372" y="1188" font-size="11" fill="#46B57D">05</text>
+<text class="s" x="398" y="1188" font-size="13.5" fill="#E6EDF3"><tspan font-weight="700">evidence</tspan><tspan fill="#AEB7C0">  research, measure, verify</tspan></text>
+<text class="m" x="372" y="1211" font-size="11" fill="#46B57D">06</text>
+<text class="s" x="398" y="1211" font-size="13.5" fill="#E6EDF3"><tspan font-weight="700">goals</tspan><tspan fill="#AEB7C0">  outcomes over technology fashion</tspan></text>
+<text class="s" x="48" y="1262" font-size="11.5" fill="#AEB7C0">Squares show public evidence, not skill level.</text>
+</svg>

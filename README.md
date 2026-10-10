@@ -6,7 +6,11 @@ Software engineer and tech lead, about four years in industry. I want to know ho
 
 <!-- The graph is generated. Edit the model in assets/knowledge-graph.py, then run: python3 assets/knowledge-graph.py -->
 <p align="center">
-  <img src="assets/knowledge-graph.svg" width="680" alt="A knowledge graph with Dhodraj Sundaram at the centre and six domains around him: Reasoning, Systems, Tools and AI, Open source, Learning and Product. Each domain holds concepts such as first principles, concurrency, agent orchestration, published packages, measured results and scope cuts. Labelled links cross domains, for example concurrency informs agent orchestration and measured results set scope cuts. Backend architecture, operating systems, distributed systems, networking and how mechanisms work are grey: interests with nothing public yet. Three callouts explain inverse thinking, systems first, and turning insight into workflow. A footer lists six decision rules, from first principles to goals.">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/knowledge-graph-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/knowledge-graph.svg">
+    <img src="assets/knowledge-graph.svg" width="680" alt="A knowledge graph with Dhodraj Sundaram at the centre and six domains around him: Reasoning, Systems, Tools and AI, Open source, Learning and Product. Each domain holds concepts such as first principles, concurrency, agent orchestration, published packages, measured results and scope cuts. Labelled links cross domains, for example concurrency informs agent orchestration and measured results set scope cuts. Backend architecture, operating systems, distributed systems, networking and how mechanisms work are grey: interests with nothing public yet. Three callouts explain inverse thinking, systems first, and turning insight into workflow. A footer lists six decision rules, from first principles to goals.">
+  </picture>
 </p>
 
 <!-- Drawn daily by .github/workflows/snake.yml and published to the output branch. -->
