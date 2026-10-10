@@ -11,6 +11,15 @@ Software engineer and tech lead, about four years in industry. I want to know ho
 
 A filled square means the concept shows in public work. An outlined square means it is started but early. A small grey square means an interest with nothing public behind it yet. The repositories and figures behind the graph are in the sections below.
 
+<!-- Drawn daily by .github/workflows/snake.yml and published to the output branch. -->
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Dhodraj/Dhodraj/output/github-snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Dhodraj/Dhodraj/output/github-snake.svg">
+    <img alt="My GitHub contribution grid for the past year, animated as a snake that eats each day with contributions." src="https://raw.githubusercontent.com/Dhodraj/Dhodraj/output/github-snake.svg">
+  </picture>
+</p>
+
 ## Selected work
 
 ### [colony](https://github.com/Dhodraj/colony)

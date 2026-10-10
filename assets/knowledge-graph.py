@@ -220,12 +220,19 @@ def esc(s):
     return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 
 
+def sweep(n):
+    """0..1 by angle round the identity node, clockwise from the top. Used to
+    stagger the load animation so the graph builds in one sweep."""
+    a = math.atan2(n.y - CY, n.x - CX) + math.pi / 2
+    return (a % (2 * math.pi)) / (2 * math.pi) * 0.6
+
+
 def render(nodes, edges):
     out = []
     labels = []
     o = out.append
     o(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" role="img" aria-labelledby="t d">')
-    o('<title id="t">Knowledge graph: how Dhodraj Sundaram\'s engineering ideas connect to his public work</title>')
+    o('<title id="t">Knowledge graph: how Dhodraj Sundaram\'s engineering ideas connect</title>')
     o(f'<desc id="d">{esc(describe())}</desc>')
     o('<defs>')
     o(f'<pattern id="dots" width="16" height="16" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="0.8" fill="#E1DFD8"/></pattern>')
@@ -234,6 +241,13 @@ def render(nodes, edges):
     o('<style>')
     o(f'.s{{font-family:{SANS}}} .m{{font-family:{MONO}}} .f{{font-family:{SERIF}}}')
     o(f'.halo{{paint-order:stroke;stroke:{BG};stroke-width:4px;stroke-linejoin:round}}')
+    o('.draw{stroke-dasharray:1;animation:draw .7s ease-out both}')
+    o('.fade{animation:fade .5s ease-out both}')
+    o('.pop{transform-box:fill-box;transform-origin:center;animation:pop .45s cubic-bezier(.2,.9,.3,1.25) both}')
+    o('@keyframes draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}')
+    o('@keyframes fade{from{opacity:0}to{opacity:1}}')
+    o('@keyframes pop{from{opacity:0;transform:scale(.3)}to{opacity:1;transform:scale(1)}}')
+    o('@media (prefers-reduced-motion:reduce){.draw,.fade,.pop{animation:none}}')
     o('</style></defs>')
     o(f'<rect width="{W}" height="{H}" fill="{BG}"/>')
     o(f'<rect x="{GX0-24}" y="{GY0-24}" width="{GX1-GX0+48}" height="{GY1-GY0+40}" fill="url(#dots)"/>')
@@ -246,10 +260,10 @@ def render(nodes, edges):
     for a, b, kind in edges:
         A, B = nodes[a], nodes[b]
         if kind == "member":
-            o(f'<line x1="{A.x:.1f}" y1="{A.y:.1f}" x2="{B.x:.1f}" y2="{B.y:.1f}" stroke="#9DAFA3" stroke-width="1.1"/>')
+            o(f'<line class="draw" pathLength="1" style="animation-delay:{1.0 + sweep(B):.2f}s" x1="{A.x:.1f}" y1="{A.y:.1f}" x2="{B.x:.1f}" y2="{B.y:.1f}" stroke="#9DAFA3" stroke-width="1.1"/>')
     for d in DOMAINS:
         D = nodes[d[0]]
-        o(f'<line x1="{CX}" y1="{CY}" x2="{D.x:.1f}" y2="{D.y:.1f}" stroke="{INK}" stroke-width="2.4"/>')
+        o(f'<line class="draw" pathLength="1" style="animation-delay:{0.35 + sweep(D) * 0.5:.2f}s" x1="{CX}" y1="{CY}" x2="{D.x:.1f}" y2="{D.y:.1f}" stroke="{INK}" stroke-width="2.4"/>')
     placed = []
     for a, b, lab, kind in RELATIONS:
         A, B = nodes[a], nodes[b]
@@ -278,7 +292,8 @@ def render(nodes, edges):
                     best = (score, cx_, cy_)
         qx, qy = best[1], best[2]
         col, mk, dash = (ACCENT, "aa", ' stroke-dasharray="5 4"') if kind == "loop" else (EDGE, "ah", "")
-        o(f'<path d="M{sx:.1f} {sy:.1f}Q{qx:.1f} {qy:.1f} {ex:.1f} {ey:.1f}" fill="none" stroke="{col}" stroke-width="1.3"{dash} marker-end="url(#{mk})"/>')
+        anim = 'class="fade"' if kind == "loop" else 'class="draw" pathLength="1"'
+        o(f'<g class="fade" style="animation-delay:{2.0 + sweep(A) * 0.4:.2f}s"><path {anim} style="animation-delay:{2.0 + sweep(A) * 0.4:.2f}s" d="M{sx:.1f} {sy:.1f}Q{qx:.1f} {qy:.1f} {ex:.1f} {ey:.1f}" fill="none" stroke="{col}" stroke-width="1.3"{dash} marker-end="url(#{mk})"/></g>')
         # put the label at the first point along the curve that is clear of
         # every node, its label, and labels already placed
         lw = text_w(lab, 11, True) + 8
@@ -296,11 +311,12 @@ def render(nodes, edges):
             px, py = bez(0.5); best = (px, py, (px - lw/2, py - 8, px + lw/2, py + 8))
         lx, ly, bx = best
         placed.append(bx)
-        labels.append(f'<text class="m halo" x="{lx:.1f}" y="{ly + 4:.1f}" text-anchor="middle" font-size="11" fill="{ACCENT if kind == "loop" else EDGE_LABEL}">{esc(lab)}</text>')
+        labels.append(f'<text class="m halo fade" style="animation-delay:{2.5 + sweep(A) * 0.4:.2f}s" x="{lx:.1f}" y="{ly + 4:.1f}" text-anchor="middle" font-size="11" fill="{ACCENT if kind == "loop" else EDGE_LABEL}">{esc(lab)}</text>')
 
     # nodes
     for n in nodes.values():
         if n.kind == "concept":
+            o(f'<g class="pop" style="animation-delay:{1.2 + sweep(n):.2f}s">')
             q = n.r * 0.9
             if n.state == "built":
                 o(f'<rect x="{n.x-q:.1f}" y="{n.y-q:.1f}" width="{2*q:.1f}" height="{2*q:.1f}" fill="{ACCENT}"/>')
@@ -311,23 +327,31 @@ def render(nodes, edges):
             else:
                 o(f'<rect x="{n.x-q:.1f}" y="{n.y-q:.1f}" width="{2*q:.1f}" height="{2*q:.1f}" fill="{BG}" stroke="#868A84" stroke-width="1.3"/>')
                 fill = GREY
-            o(f'<text class="s halo" x="{n.x:.1f}" y="{n.y + n.r + 16:.1f}" text-anchor="middle" font-size="15.5" fill="{fill}">{esc(n.label)}</text>')
+            o('</g>')
+            o(f'<text class="s halo fade" style="animation-delay:{1.35 + sweep(n):.2f}s" x="{n.x:.1f}" y="{n.y + n.r + 16:.1f}" text-anchor="middle" font-size="15.5" fill="{fill}">{esc(n.label)}</text>')
         elif n.kind == "domain":
             q = n.r + 2
+            dl = 0.85 + sweep(n) * 0.5
+            o(f'<g class="pop" style="animation-delay:{dl:.2f}s">')
             o(f'<rect x="{n.x-q-4:.1f}" y="{n.y-q-4:.1f}" width="{2*q+8:.1f}" height="{2*q+8:.1f}" fill="{BG}" stroke="{INK}" stroke-width="0.9"/>')
             o(f'<rect x="{n.x-q:.1f}" y="{n.y-q:.1f}" width="{2*q:.1f}" height="{2*q:.1f}" fill="{INK}"/>')
+            o('</g>')
             serial = "%02d" % ([d[0] for d in DOMAINS].index(n.id) + 1)
             lw_ = text_w(n.label, 22, bold=True)
-            o(f'<text class="m halo" x="{n.x - lw_/2 - 6:.1f}" y="{n.y + n.r + 29:.1f}" text-anchor="end" font-size="11" fill="{ACCENT}">{serial}</text>')
-            o(f'<text class="s halo" x="{n.x:.1f}" y="{n.y + n.r + 29:.1f}" text-anchor="middle" font-size="22" font-weight="700" fill="{INK}">{esc(n.label)}</text>')
+            o(f'<text class="m halo fade" style="animation-delay:{dl + 0.15:.2f}s" x="{n.x - lw_/2 - 6:.1f}" y="{n.y + n.r + 29:.1f}" text-anchor="end" font-size="11" fill="{ACCENT}">{serial}</text>')
+            o(f'<text class="s halo fade" style="animation-delay:{dl + 0.15:.2f}s" x="{n.x:.1f}" y="{n.y + n.r + 29:.1f}" text-anchor="middle" font-size="22" font-weight="700" fill="{INK}">{esc(n.label)}</text>')
     out.extend(labels)
+    o('<g class="fade" style="animation-delay:2.9s">')
     callouts(o, nodes)
+    o('</g>')
     # identity: crosshair and serif name, no box
+    o('<g class="fade">')
     o(f'<circle cx="{CX}" cy="{CY}" r="74" fill="{BG}" stroke="{ACCENT}" stroke-width="1" stroke-dasharray="2 4"/>')
     o(f'<path d="M{CX-94} {CY}H{CX-78}M{CX+78} {CY}H{CX+94}M{CX} {CY-94}V{CY-78}M{CX} {CY+78}V{CY+94}" stroke="{ACCENT}" stroke-width="1.4"/>')
     o(f'<text class="f halo" x="{CX}" y="{CY-6}" text-anchor="middle" font-size="31" fill="{INK}">Dhodraj</text>')
     o(f'<text class="f halo" x="{CX}" y="{CY+25}" text-anchor="middle" font-size="31" fill="{INK}">Sundaram</text>')
     o(f'<text class="m" x="{CX}" y="{CY+42}" text-anchor="middle" font-size="9.5" letter-spacing="1.4" fill="{ACCENT}">ENGINEER / LEAD</text>')
+    o('</g>')
     panel(o)
     o('</svg>')
     return "\n".join(out)
