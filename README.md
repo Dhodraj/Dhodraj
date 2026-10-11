@@ -37,7 +37,7 @@ Software engineer and tech lead, about four years in industry. I want to know ho
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/journey-dark.svg">
     <source media="(prefers-color-scheme: light)" srcset="assets/journey.svg">
-    <img src="assets/journey.svg" width="680" alt="A self-playing timeline: a figure runs past milestones from 2021 coursework and IoT, through 2022 a browser video call, 2024 the first npm packages, 2025 seekly on PyPI and an ML backend, to 2026 agents and product work.">
+    <img src="assets/journey.svg" width="680" alt="A self-playing career line: a figure walks through four stages, each with its span: Student 2018 to 2022, Graduate 2022 to 2023, Software Engineer 2023 to 2025, and Tech Lead 2025 to present.">
   </picture>
 </p>
 
