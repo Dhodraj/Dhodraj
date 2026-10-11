@@ -22,6 +22,27 @@ Software engineer and tech lead, about four years in industry. I want to know ho
   </picture>
 </p>
 
+## A bit of play
+
+<!-- Generated: python3 assets/character-card.py  and  python3 assets/journey.py -->
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/character-card-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/character-card.svg">
+    <img src="assets/character-card.svg" width="680" alt="A character card: Dhodraj Sundaram, class engineer and tech lead, method first principles. Loadout bars count public work per area, not skill: Reasoning 5 of 5, Systems 1 of 5, Tools and AI 3 of 4, Product 3 of 3, Learning 2 of 3, Open source 2 of 2. Vitals: 26 public repos, 3 packages, Python/TypeScript/JavaScript, since 2021. Inventory: colony, seekly, collectweak, deep-freeze-utility, pmos-companion, hunt-mode, medroute, therionis.">
+  </picture>
+</p>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/journey-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/journey.svg">
+    <img src="assets/journey.svg" width="680" alt="A self-playing timeline: a figure runs past milestones from 2021 coursework and IoT, through 2022 a browser video call, 2024 the first npm packages, 2025 seekly on PyPI and an ML backend, to 2026 agents and product work.">
+  </picture>
+</p>
+
+<p align="center"><a href="GAME.md">▶ Play the one-minute text adventure</a></p>
+
 ## Contact
 
 <!-- Cards are generated. Edit assets/contact-cards.py, then run: python3 assets/contact-cards.py -->
