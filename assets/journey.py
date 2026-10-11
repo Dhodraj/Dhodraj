@@ -10,10 +10,10 @@ import os
 
 # role, span label
 STAGES = [
-    ("Student",            "'18 – '22"),
-    ("Graduate",           "'22 – '23"),
-    ("Software Engineer",  "'23 – '25"),
-    ("Tech Lead",          "'25 – present"),
+    ("Student",            "2018 – 2022"),
+    ("Graduate",           "2022 – 2023"),
+    ("Software Engineer",  "2023 – 2025"),
+    ("Tech Lead",          "2025 – present"),
 ]
 W, H = 900, 210
 LOOP = 12  # seconds
